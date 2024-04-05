@@ -1,6 +1,39 @@
-div.navBar-header {
+header {
   width: 100%;
   background-color: #202020;
-  color: #fff;
-  font-size: 12px;
+  height: 80px;
+  display: flex;
+  font-size: 1.7rem;
+}
+
+div.navBar-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+div.navBar-header div {
+  display: flex;
+  gap: 1rem;
+}
+
+div.navBar-header div > a {
+  font-family: "roboto condensed";
+  color: white;
+}
+
+div.div-logo-marvel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-marvel {
+  width: 50%;
+  max-width: 200px;
+}
+
+.deadpool-chill {
+  max-width: 100px;
+  margin-top: 40px;
 }

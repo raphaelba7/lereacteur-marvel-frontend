@@ -1,0 +1,29 @@
+footer {
+  background-color: black;
+  color: white;
+  height: 80px;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.footer-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.footer-img > img {
+  max-width: 40px;
+}
+
+.footer-text p > a {
+  color: white;
+  font-weight: 800;
+}
+
+.footer-social-media > ul {
+  display: flex;
+  gap: 10px;
+}

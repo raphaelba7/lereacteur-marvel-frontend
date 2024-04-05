@@ -61,11 +61,19 @@ const Comics = ({
 
   const handlePreviousPage = () => {
     setCurrentPage(currentPage - 1);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
     //console.log(currentPage);
   };
 
   const handleNextPage = () => {
     setCurrentPage(currentPage + 1);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
     //console.log(currentPage);
   };
 

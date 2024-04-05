@@ -11,7 +11,7 @@ import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
 import Comics from "./pages/comics/Comics";
 import Character from "./pages/character/Character";
-import Signin from "./pages/signin/Signin";
+import Signup from "./pages/signup/Signup";
 import Login from "./pages/login/Login";
 import Favoris from "./pages/favoris/Favoris";
 
@@ -72,8 +72,8 @@ function App() {
             }
           />
           <Route
-            path="/signin/"
-            element={<Signin token={token} setToken={setToken} />}
+            path="/signup/"
+            element={<Signup token={token} setToken={setToken} />}
           />
           <Route
             path="/login/"

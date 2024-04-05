@@ -2,6 +2,7 @@ import "./Header.css";
 import { Link } from "react-router-dom";
 import Cookies from "js-cookie";
 import logo from "../../assets/img/logo-marvel.svg";
+import deadpool from "../../assets/img/deadpool-chill.png";
 const Header = ({
   setCurrentPage,
   setLimit,
@@ -23,7 +24,7 @@ const Header = ({
   return (
     <>
       <header>
-        <div className="navBar-header">
+        <div className="navBar-header container">
           <div>
             <Link to="/" onClick={handleReset}>
               Characters
@@ -32,8 +33,8 @@ const Header = ({
               Comics
             </Link>
           </div>
-          <div>
-            <img src={logo} alt="logo-marvel" />
+          <div className="div-logo-marvel">
+            <img src={logo} alt="logo-marvel" className="logo-marvel" />
           </div>
           <div>
             {token ? (
@@ -45,8 +46,8 @@ const Header = ({
                 <Link to="/login" onClick={handleReset}>
                   Login
                 </Link>
-                <Link to="/signin" onClick={handleReset}>
-                  Sign in
+                <Link to="/signup" onClick={handleReset}>
+                  Signup
                 </Link>
               </>
             )}
@@ -55,6 +56,13 @@ const Header = ({
             <Link to="/favoris" onClick={handleReset}>
               Favoris
             </Link>
+          </div>
+          <div className="dead-pool-nav">
+            <img
+              className="deadpool-chill"
+              src={deadpool}
+              alt="deadpool chill"
+            />
           </div>
         </div>
       </header>

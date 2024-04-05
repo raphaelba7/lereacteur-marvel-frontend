@@ -5,6 +5,7 @@ import Card from "../../components/card/Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Home.css";
 import Loader from "../../components/loader/Loader";
+import hero from "../../assets/img/deadpool-marvel.jpg";
 
 const Home = ({
   currentPage,
@@ -62,12 +63,19 @@ const Home = ({
 
   const handlePreviousPage = () => {
     setCurrentPage(currentPage - 1);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
     //console.log(currentPage);
   };
 
   const handleNextPage = () => {
     setCurrentPage(currentPage + 1);
-    //console.log(currentPage);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   const handleSearchChange = (event) => {
@@ -128,7 +136,20 @@ const Home = ({
     const reverseSortData = sortData.reverse();
     return (
       <main>
-        <section>
+        <section className="hero-section">
+          <div className="box-hero">
+            <img src={hero} alt="Hero deadpool bd" />
+            <div className="hero-text">
+              <h1>MARVEL CHARACTERS</h1>
+              <span>
+                Come find the mythical heroes and villains gathered over the
+                years in the different Marvel comics
+              </span>
+            </div>
+          </div>
+        </section>
+        s
+        <section className="container">
           <div>Les characters</div>
           <input type="search" onChange={handleSearchChange} />
           <label htmlFor="limit-select">afficher :</label>
@@ -150,15 +171,6 @@ const Home = ({
               <option value="true">A-Z</option>
               <option value="false">Z-A</option>
             </select>
-          </div>
-          <div>
-            <button onClick={handlePreviousPage} disabled={currentPage === 1}>
-              Précédent
-            </button>
-            <p>{currentPage}</p>
-            <button onClick={handleNextPage} disabled={currentPage === maxPage}>
-              Suivant
-            </button>
           </div>
           <div className="div-grid-base">
             {sort === "true"
@@ -205,6 +217,15 @@ const Home = ({
                     </div>
                   );
                 })}
+          </div>
+          <div className="home-page">
+            <button onClick={handlePreviousPage} disabled={currentPage === 1}>
+              Précédent
+            </button>
+            <p>{currentPage}</p>
+            <button onClick={handleNextPage} disabled={currentPage === maxPage}>
+              Suivant
+            </button>
           </div>
         </section>
       </main>
