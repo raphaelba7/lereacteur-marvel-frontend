@@ -10,12 +10,15 @@ const Header = ({
   setSort,
   setToken,
   token,
+  isOpen,
+  setIsOpen,
 }) => {
   const handleReset = () => {
     setCurrentPage(1);
     setLimit(100);
     setSearch("");
     setSort("true");
+    setIsOpen(false);
   };
   const handleLogOut = () => {
     Cookies.remove("userToken");
@@ -36,10 +39,10 @@ const Header = ({
           <div className="div-logo-marvel">
             <img src={logo} alt="logo-marvel" className="logo-marvel" />
           </div>
-          <div>
+          <div className="login-logout-signup">
             {token ? (
               <button name="Se deconnecter" onClick={handleLogOut}>
-                Se Déconnecter
+                Logout
               </button>
             ) : (
               <>
@@ -53,17 +56,13 @@ const Header = ({
             )}
           </div>
           <div>
-            <Link to="/favoris" onClick={handleReset}>
-              Favoris
-            </Link>
+            {token && (
+              <Link to="/favoris" onClick={handleReset}>
+                Favoris
+              </Link>
+            )}
           </div>
-          <div className="dead-pool-nav">
-            <img
-              className="deadpool-chill"
-              src={deadpool}
-              alt="deadpool chill"
-            />
-          </div>
+          <img className="deadpool-chill" src={deadpool} alt="deadpool chill" />
         </div>
       </header>
     </>

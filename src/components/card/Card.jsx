@@ -1,3 +1,4 @@
+import "./Card.css";
 const Card = ({ name, description, pathImg }) => {
   return (
     <div className="full-card">
@@ -7,8 +8,12 @@ const Card = ({ name, description, pathImg }) => {
         </figure>
       </div>
       <div className="card-body">
-        <h3>{name}</h3>
-        <p>{description}</p>
+        <div className="title-card">
+          <h3>{name}</h3>
+        </div>
+        <div className="description-card">
+          <p>{description}</p>
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 header {
   width: 100%;
+  position: relative;
   background-color: #202020;
   height: 80px;
   display: flex;
@@ -34,6 +35,22 @@ div.div-logo-marvel {
 }
 
 .deadpool-chill {
+  position: absolute;
   max-width: 100px;
   margin-top: 40px;
+  right: 0;
+}
+
+.login-logout-signup > button {
+  border: none;
+  background-color: #202020;
+  font-size: 1.7rem;
+  color: white;
+}
+
+@media (max-width: 425px) {
+  .deadpool-chill {
+    max-width: 50px;
+    margin-top: 50px;
+  }
 }

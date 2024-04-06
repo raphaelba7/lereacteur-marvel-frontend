@@ -1,6 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Loader from "../../components/loader/Loader";
+import marvelHero from "../../assets/img/marvel-comics.jpg";
+import "./Character.css";
 
 const Character = () => {
   const [data, setData] = useState({});
@@ -22,12 +25,19 @@ const Character = () => {
     fetchData();
   }, [id]);
 
-  console.log(data);
+  //console.log(data);
   if (isLoading === true) {
     return (
-      <>
-        <h2>En chargement....</h2>
-      </>
+      <Loader
+        visible={true}
+        height="80"
+        width="80"
+        color="red"
+        ariaLabel="tail-spin-loading"
+        radius="1"
+        wrapperStyle={{}}
+        wrapperClass=""
+      />
     );
   } else {
     let pathImgChar = data.thumbnail.path;
@@ -35,32 +45,47 @@ const Character = () => {
 
     return (
       <main>
-        <section>
-          <div>Le character</div>
-          <input type="search" />
-          <div>
-            <h2>{data.name}</h2>
-            <div>{data.description}</div>
-            <div>
-              <img
-                src={pathImgChar + "/portrait_xlarge." + extensionChar}
-                alt=""
-              />
+        <section className="hero-section">
+          <div className="box-hero">
+            <img src={marvelHero} alt="Hero comics bd" />
+            <div className="charac-card">
+              <div>
+                <img
+                  src={pathImgChar + "/portrait_xlarge." + extensionChar}
+                  alt=""
+                />
+              </div>
+              <h1>{data.name}</h1>
+              <span>{data.description}</span>
             </div>
           </div>
-          <div>
-            {data.comics.map((elem) => {
-              let pathImg = elem.thumbnail.path;
-              let extension = elem.thumbnail.extension;
-              //   console.log(pathImg + "/portrait_small." + extension);
-              return (
-                <div key={elem.title}>
-                  <span>{elem.title}</span>
-                  <span>{elem.description}</span>
-                  <img src={pathImg + "/portrait_xlarge." + extension} alt="" />
-                </div>
-              );
-            })}
+        </section>
+        <section className="bg-black">
+          <div className="container charac-comics-title">
+            <h2>The Comics where you can see him :</h2>
+          </div>
+        </section>
+        <section className="container section-comics-charac">
+          <div className="comics-charac">
+            <div className="comics-grid">
+              {data.comics.map((elem) => {
+                let pathImg = elem.thumbnail.path;
+                let extension = elem.thumbnail.extension;
+                //   console.log(pathImg + "/portrait_small." + extension);
+                return (
+                  <>
+                    <div className="comics-card">
+                      <h2>{elem.title}</h2>
+                      <p>{elem.description}</p>
+                      <img
+                        src={pathImg + "/portrait_xlarge." + extension}
+                        alt=""
+                      />
+                    </div>
+                  </>
+                );
+              })}
+            </div>
           </div>
         </section>
       </main>

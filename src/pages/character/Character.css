@@ -1,0 +1,97 @@
+.box-hero > div.charac-card {
+  background-color: rgba(0, 0, 0, 0.52);
+  position: absolute;
+  width: 50%;
+  height: 400px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+div.charac-card > h1 {
+  font-size: 3rem;
+  font-family: "roboto condensed bold";
+  line-height: 5rem;
+}
+
+div.charac-card > span {
+  font-size: 2rem;
+}
+
+section.bg-black {
+  background-color: #202020;
+  height: 80px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.charac-comics-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-family: "roboto condensed bold";
+  line-height: 5rem;
+}
+section.section-comics-charac {
+  height: 100%;
+  margin-bottom: 40px;
+}
+.comics-charac {
+  display: flex;
+  gap: 10px;
+}
+
+.comics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 10px;
+  margin-top: 80px;
+}
+
+.comics-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-width: 3px 4px 3px 5px;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+  padding-bottom: 5px;
+}
+.comics-card > img {
+  object-fit: contain;
+  width: 200px;
+  height: 200px;
+}
+
+div.comics-card > h2 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  div.charac-card > span {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .comics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
+  }
+  div.charac-card > span {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .box-hero > div.charac-card {
+    overflow-y: scroll;
+  }
+}

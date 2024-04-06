@@ -17,8 +17,12 @@ import Favoris from "./pages/favoris/Favoris";
 
 //import fontAwsome
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faHeart, faBan } from "@fortawesome/free-solid-svg-icons";
-library.add(faHeart, faBan);
+import {
+  faHeart,
+  faBan,
+  faMagnifyingGlass,
+} from "@fortawesome/free-solid-svg-icons";
+library.add(faHeart, faBan, faMagnifyingGlass);
 
 function App() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -26,6 +30,7 @@ function App() {
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("true");
   const [token, setToken] = useState(Cookies.get("userToken") || "");
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
@@ -37,6 +42,8 @@ function App() {
           setSort={setSort}
           token={token}
           setToken={setToken}
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
         />
         <Routes>
           <Route
@@ -52,6 +59,8 @@ function App() {
                 sort={sort}
                 setSort={setSort}
                 token={token}
+                isOpen={isOpen}
+                setIsOpen={setIsOpen}
               />
             }
           />
@@ -68,6 +77,8 @@ function App() {
                 sort={sort}
                 setSort={setSort}
                 token={token}
+                isOpen={isOpen}
+                setIsOpen={setIsOpen}
               />
             }
           />

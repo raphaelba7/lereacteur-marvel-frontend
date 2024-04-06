@@ -1,0 +1,57 @@
+.main-favoris {
+  border-bottom: #ed1d23 solid 1px;
+}
+.section-favorite {
+  background-color: black;
+  padding: 40px 0;
+}
+
+.red-separate {
+  width: 100%;
+  background-color: #ed1d23;
+  height: 1px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.flex-favorite {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+}
+.flex-title-favorite {
+  flex: 1;
+}
+.flex-title-favorite > h2 {
+  font-size: 2rem;
+}
+
+.flex-favorite-charac {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex: 5;
+  overflow-x: scroll;
+  color: white;
+  gap: 10px;
+}
+
+.flex-favorite-comic {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex: 5;
+  overflow-x: scroll;
+  color: white;
+  gap: 10px;
+}
+
+.card-fav-comic {
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.card-fav-charac {
+  flex: 0 0 auto;
+  position: relative;
+}
