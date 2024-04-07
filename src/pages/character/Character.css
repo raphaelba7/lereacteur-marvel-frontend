@@ -49,7 +49,7 @@ section.section-comics-charac {
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(100px, auto);
   grid-gap: 10px;
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 .comics-card {
@@ -67,6 +67,9 @@ section.section-comics-charac {
   object-fit: contain;
   width: 200px;
   height: 200px;
+  border: black 1px solid;
+  border-width: 3px 4px 3px 5px;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
 }
 
 div.comics-card > h2 {

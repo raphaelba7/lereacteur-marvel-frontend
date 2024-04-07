@@ -24,7 +24,7 @@ div.navBar-header div > a {
   color: white;
 }
 
-div.div-logo-marvel {
+div.div-logo-marvel > a {
   display: flex;
   justify-content: center;
   align-items: center;

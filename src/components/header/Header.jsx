@@ -37,7 +37,9 @@ const Header = ({
             </Link>
           </div>
           <div className="div-logo-marvel">
-            <img src={logo} alt="logo-marvel" className="logo-marvel" />
+            <Link to="/" onClick={handleReset}>
+              <img src={logo} alt="logo-marvel" className="logo-marvel" />
+            </Link>
           </div>
           <div className="login-logout-signup">
             {token ? (

@@ -22,6 +22,7 @@ import {
   faBan,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
+import Error from "./pages/error/Error";
 library.add(faHeart, faBan, faMagnifyingGlass);
 
 function App() {
@@ -92,6 +93,7 @@ function App() {
           />
           <Route path="/favoris/" element={<Favoris token={token} />} />
           <Route path="/character/:id" element={<Character />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </Router>
       <Footer />

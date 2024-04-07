@@ -1,0 +1,21 @@
+.main-loader {
+  height: calc(100vh - 160px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1.loader-title {
+  font-size: 3rem;
+  font-family: "roboto condensed bold";
+  line-height: 5rem;
+  background-color: #ed1d23;
+  color: white;
+  border-radius: 10px 0 10px 0;
+  padding: 5px;
+}

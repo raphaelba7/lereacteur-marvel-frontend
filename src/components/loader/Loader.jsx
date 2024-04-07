@@ -1,4 +1,6 @@
 import { TailSpin } from "react-loader-spinner";
+import wrongpage from "../../assets/img/wrong-page.jpg";
+import "./Loader.css";
 const Loader = ({
   visible,
   height,
@@ -10,7 +12,10 @@ const Loader = ({
   wrapperClass,
 }) => {
   return (
-    <main>
+    <main
+      className="main-loader"
+      style={{ backgroundImage: `url(${wrongpage})` }}
+    >
       <TailSpin
         visible={visible}
         height={height}

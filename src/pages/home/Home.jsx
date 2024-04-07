@@ -1,5 +1,4 @@
 import axios from "axios";
-import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Card from "../../components/card/Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -233,15 +232,14 @@ const Home = ({
                         />
                       )}
 
-                      <Link to={`/character/${characters._id}`}>
-                        <div>
-                          <Card
-                            name={characters.name}
-                            description={characters.description}
-                            pathImg={totalPath}
-                          />
-                        </div>
-                      </Link>
+                      <div>
+                        <Card
+                          name={characters.name}
+                          description={characters.description}
+                          pathImg={totalPath}
+                          characters={characters._id}
+                        />
+                      </div>
                     </div>
                   );
                 })
@@ -269,15 +267,14 @@ const Home = ({
                           className="icon-fav"
                         />
                       )}
-                      <Link to={`/character/${characters._id}`}>
-                        <div>
-                          <Card
-                            name={characters.name}
-                            description={characters.description}
-                            pathImg={totalPath}
-                          />
-                        </div>
-                      </Link>
+                      <div>
+                        <Card
+                          name={characters.name}
+                          description={characters.description}
+                          pathImg={totalPath}
+                          characters={characters._id}
+                        />
+                      </div>
                     </div>
                   );
                 })}

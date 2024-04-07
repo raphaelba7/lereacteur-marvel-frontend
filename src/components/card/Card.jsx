@@ -1,11 +1,20 @@
+import { Link } from "react-router-dom";
 import "./Card.css";
-const Card = ({ name, description, pathImg }) => {
+const Card = ({ name, description, pathImg, characters }) => {
   return (
     <div className="full-card">
       <div className="card-thumb">
-        <figure>
-          <img src={pathImg} alt={name} />
-        </figure>
+        {characters ? (
+          <Link to={`/character/${characters}`}>
+            <figure>
+              <img src={pathImg} alt={name} />
+            </figure>
+          </Link>
+        ) : (
+          <figure>
+            <img src={pathImg} alt={name} />
+          </figure>
+        )}
       </div>
       <div className="card-body">
         <div className="title-card">

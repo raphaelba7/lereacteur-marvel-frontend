@@ -92,11 +92,17 @@ div.search-bar {
 .result-filter > p {
   color: white;
   font-size: 1.5rem;
+  border-bottom: #ed1d23 solid 1px;
 }
 .limit-order-filter {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.limit-order-filter div > label {
+  background-color: #ed1d23;
+  border-radius: 5px 0 5px 0;
 }
 
 /* Section Grid */
