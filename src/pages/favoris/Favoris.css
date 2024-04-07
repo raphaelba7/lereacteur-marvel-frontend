@@ -1,9 +1,11 @@
 .main-favoris {
   border-bottom: #ed1d23 solid 1px;
+  min-height: calc(100vh - 160px);
 }
 .section-favorite {
   background-color: black;
   padding: 40px 0;
+  min-height: calc(100vh - 561px);
 }
 
 .red-separate {
@@ -18,6 +20,7 @@
   justify-content: space-evenly;
   align-items: center;
   color: white;
+  min-height: 45%;
 }
 .flex-title-favorite {
   flex: 1;
@@ -45,7 +48,10 @@
   color: white;
   gap: 10px;
 }
-
+.flex-favorite-comic .card-fav-comic > p {
+  width: 150px;
+  word-wrap: break-word;
+}
 .card-fav-comic {
   flex: 0 0 auto;
   position: relative;
@@ -54,4 +60,24 @@
 .card-fav-charac {
   flex: 0 0 auto;
   position: relative;
+}
+
+.icon-fav-remove {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  color: white;
+  background-color: #ed1d23;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 1000;
+  right: 15px;
+  bottom: 15px;
+}
+
+.icon-fav-remove:hover {
+  opacity: 0.7;
+}
+.icon-fav-remove:active {
+  background-color: #202020;
 }

@@ -11,7 +11,9 @@ const Favoris = ({ token }) => {
 
   const handleDelete = async (elem) => {
     try {
-      await axios.delete(`http://localhost:3000/favorisdislike/${elem._id}`);
+      await axios.delete(
+        ` https://site--backend-marvel--ky7tz22vm4g7.code.run/favorisdislike/${elem._id}`
+      );
       const updatedData = data.favoris.filter((item) => item._id !== elem._id);
       setData({ ...data, favoris: updatedData });
     } catch (error) {
@@ -21,7 +23,9 @@ const Favoris = ({ token }) => {
 
   const handleDeleteCom = async (elem) => {
     try {
-      await axios.delete(`http://localhost:3000/favorisdislik/${elem._id}`);
+      await axios.delete(
+        ` https://site--backend-marvel--ky7tz22vm4g7.code.run/favorisdislik/${elem._id}`
+      );
       const updatedData2 = data2.favoris.filter(
         (item) => item._id !== elem._id
       );
@@ -34,16 +38,22 @@ const Favoris = ({ token }) => {
   const fetchData = async () => {
     try {
       const [charactersResponse, comicsResponse] = await Promise.all([
-        axios.get(`http://localhost:3000/favoris/char`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }),
-        axios.get(`http://localhost:3000/favoris/comics`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }),
+        axios.get(
+          `https://site--backend-marvel--ky7tz22vm4g7.code.run/favoris/char`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        ),
+        axios.get(
+          `https://site--backend-marvel--ky7tz22vm4g7.code.run/favoris/comics`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        ),
       ]);
       setData(charactersResponse.data);
       setData2(comicsResponse.data);
@@ -96,7 +106,7 @@ const Favoris = ({ token }) => {
                         onClick={() => {
                           handleDelete(elem);
                         }}
-                        className="icon-fav"
+                        className="icon-fav-remove"
                       />
                       <h3>{elem.name}</h3>
                       <img src={elem.image} alt=""></img>
@@ -119,7 +129,7 @@ const Favoris = ({ token }) => {
                         onClick={() => {
                           handleDeleteCom(elem2);
                         }}
-                        className="icon-fav"
+                        className="icon-fav-remove"
                       />
                       <p>{elem2.title}</p>
                       <img src={elem2.image} alt=""></img>

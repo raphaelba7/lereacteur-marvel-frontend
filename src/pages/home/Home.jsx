@@ -42,7 +42,7 @@ const Home = ({
 
         try {
           const response = await axios.get(
-            ` http://localhost:3000/characters?skip=${skip}&limit=${limit}&name=${search}`
+            ` https://site--backend-marvel--ky7tz22vm4g7.code.run/characters?skip=${skip}&limit=${limit}&name=${search}`
           );
           setData(response.data);
           setIsLoading(false);
@@ -55,7 +55,7 @@ const Home = ({
         }
         try {
           const response = await axios.get(
-            ` http://localhost:3000/characters?skip=${skip}&limit=${limit}&name=${search}`
+            ` https://site--backend-marvel--ky7tz22vm4g7.code.run/characters?skip=${skip}&limit=${limit}&name=${search}`
           );
           setData(response.data);
           setIsLoading(false);
@@ -104,7 +104,7 @@ const Home = ({
   const handleCharacFav = async (characters) => {
     try {
       const response = await axios.post(
-        `http://localhost:3000/favoris/char`,
+        `https://site--backend-marvel--ky7tz22vm4g7.code.run/favoris/char`,
         {
           name: characters.name,
           id_api: characters._id,

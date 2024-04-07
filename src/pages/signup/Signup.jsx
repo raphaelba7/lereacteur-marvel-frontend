@@ -18,11 +18,14 @@ const Signup = ({ token, setToken }) => {
     try {
       setErrorMessage("");
 
-      const { data } = await axios.post(` http://localhost:3000/user/signup`, {
-        username: username,
-        email: email,
-        password: password,
-      });
+      const { data } = await axios.post(
+        `https://site--backend-marvel--ky7tz22vm4g7.code.run/user/signup`,
+        {
+          username: username,
+          email: email,
+          password: password,
+        }
+      );
 
       Cookies.set("userToken", data.token, { expires: 15 });
       setToken(data.token);

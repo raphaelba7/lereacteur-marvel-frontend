@@ -43,7 +43,11 @@ const Header = ({
           </div>
           <div className="login-logout-signup">
             {token ? (
-              <button name="Se deconnecter" onClick={handleLogOut}>
+              <button
+                name="Se deconnecter"
+                className="logout"
+                onClick={handleLogOut}
+              >
                 Logout
               </button>
             ) : (

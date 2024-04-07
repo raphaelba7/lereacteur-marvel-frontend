@@ -40,7 +40,7 @@ const Comics = ({
         }
         try {
           const response = await axios.get(
-            `http://localhost:3000/comics?skip=${skip}&limit=${limit}&title=${search}`
+            `https://site--backend-marvel--ky7tz22vm4g7.code.run/comics?skip=${skip}&limit=${limit}&title=${search}`
           );
 
           setData(response.data);
@@ -54,7 +54,7 @@ const Comics = ({
         }
         try {
           const response = await axios.get(
-            ` http://localhost:3000/comics?skip=${skip}&limit=${limit}&title=${search}`
+            ` https://site--backend-marvel--ky7tz22vm4g7.code.run/comics?skip=${skip}&limit=${limit}&title=${search}`
           );
           setData(response.data);
           setIsLoading(false);
@@ -104,7 +104,7 @@ const Comics = ({
   const handleComicFav = async (comics) => {
     try {
       const response = await axios.post(
-        `http://localhost:3000/favoris/comics`,
+        `https://site--backend-marvel--ky7tz22vm4g7.code.run/favoris/comics`,
         {
           title: comics.title,
           id_api: comics._id,
