@@ -19,6 +19,7 @@ Backend hosted on [NorthFlank](https://site--backend-marvel--ky7tz22vm4g7.code.r
   - SignUp : path=`/signup`
   - Login : path=`/login`
   - ComicsByCharacter : path=`/character/:Id`
+  - ComicById : path=`/comic/:id`
   - Favoris : path=`/favoris`
   - Error : path=`*`
 

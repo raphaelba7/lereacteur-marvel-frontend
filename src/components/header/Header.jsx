@@ -1,5 +1,5 @@
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 import logo from "../../assets/img/logo-marvel.svg";
 import deadpool from "../../assets/img/deadpool-chill.png";
@@ -13,6 +13,7 @@ const Header = ({
   isOpen,
   setIsOpen,
 }) => {
+  const navigate = useNavigate();
   const handleReset = () => {
     setCurrentPage(1);
     setLimit(100);
@@ -23,6 +24,7 @@ const Header = ({
   const handleLogOut = () => {
     Cookies.remove("userToken");
     setToken();
+    navigate("/");
   };
   return (
     <>

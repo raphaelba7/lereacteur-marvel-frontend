@@ -238,6 +238,7 @@ const Comics = ({
                           name={comics.title}
                           description={comics.description}
                           pathImg={totalPath}
+                          comic={comics._id}
                         />
                       </div>
                     </div>
@@ -273,6 +274,7 @@ const Comics = ({
                           name={comics.name}
                           description={comics.description}
                           pathImg={totalPath}
+                          comic={comics._id}
                         />
                       </div>
                     </div>

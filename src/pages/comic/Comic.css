@@ -1,0 +1,7 @@
+.main-comic {
+  height: calc(100vh - 160px);
+}
+
+.main-comic > section.background-title-filter {
+  height: 27vh;
+}

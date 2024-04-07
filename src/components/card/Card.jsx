@@ -1,11 +1,17 @@
 import { Link } from "react-router-dom";
 import "./Card.css";
-const Card = ({ name, description, pathImg, characters }) => {
+const Card = ({ name, description, pathImg, characters, comic }) => {
   return (
     <div className="full-card">
       <div className="card-thumb">
         {characters ? (
           <Link to={`/character/${characters}`}>
+            <figure>
+              <img src={pathImg} alt={name} />
+            </figure>
+          </Link>
+        ) : comic ? (
+          <Link to={`/comic/${comic}`}>
             <figure>
               <img src={pathImg} alt={name} />
             </figure>

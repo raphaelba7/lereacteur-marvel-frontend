@@ -14,6 +14,7 @@ import Character from "./pages/character/Character";
 import Signup from "./pages/signup/Signup";
 import Login from "./pages/login/Login";
 import Favoris from "./pages/favoris/Favoris";
+import Comic from "./pages/comic/Comic";
 
 //import fontAwsome
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -83,6 +84,7 @@ function App() {
               />
             }
           />
+          <Route path="/comic/:id" element={<Comic />} />
           <Route
             path="/signup/"
             element={<Signup token={token} setToken={setToken} />}
