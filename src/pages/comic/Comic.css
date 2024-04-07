@@ -1,5 +1,6 @@
 .main-comic {
   height: calc(100vh - 160px);
+  background-color: #202020;
 }
 
 .main-comic > section.background-title-filter {
