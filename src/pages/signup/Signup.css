@@ -14,7 +14,7 @@ main.main-signup {
   justify-content: center;
   flex-direction: column;
   background-color: white;
-  height: 37%;
+  height: 300px;
   border-radius: 20px;
 }
 .title-form {
